@@ -29,7 +29,7 @@ def get_totp_token(secret):
     x =str(get_hotp_token(secret,intervals_no=int(time.time())//30))
     #adding 0 in the beginning till OTP has 6 digits
     while len(x)!=6:
-        x+='0'
+        x ='0' + x
     return x
 
 def get_key(password):
